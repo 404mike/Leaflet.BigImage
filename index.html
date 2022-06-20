@@ -19,26 +19,28 @@
 <div id="mapid" style="width: 1000px; height: 700px; position: relative; outline: none;" class="leaflet-container leaflet-fade-anim leaflet-grab leaflet-touch-drag" tabindex="0"></div>
 <script>
 
-	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+	var mymap = L.map('mapid').setView([52.41436815959979, -4.0851362743498525], 13);
 
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+
+	// https://api.maptiler.com/tiles/004511f7-2020-4596-9223-fa674e0a4c97/{z}/{x}/{y}.png?key=1CYucAPOyljr43DBNflu
+	L.tileLayer('https://api.maptiler.com/tiles/ee8ebe51-0b4e-4a32-b444-ae919ed160ad/{z}/{x}/{y}?key=78ieVgsnZ53wgUTt8E8j', {
     	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(mymap);
 
-	L.marker([51.5, -0.09]).addTo(mymap);
+	// L.marker([51.5, -0.09]).addTo(mymap);
 
-	L.circle([51.508, -0.11], {
-		color: 'red',
-		fillColor: '#f03',
-		fillOpacity: 0.5,
-		radius: 500
-	}).addTo(mymap);
+	// L.circle([51.508, -0.11], {
+	// 	color: 'red',
+	// 	fillColor: '#f03',
+	// 	fillOpacity: 0.5,
+	// 	radius: 500
+	// }).addTo(mymap);
 
-	L.polygon([
-		[51.509, -0.08],
-		[51.503, -0.06],
-		[51.51, -0.047]
-	]).addTo(mymap);
+	// L.polygon([
+	// 	[51.509, -0.08],
+	// 	[51.503, -0.06],
+	// 	[51.51, -0.047]
+	// ]).addTo(mymap);
 
     L.control.bigImage({position: 'topright'}).addTo(mymap);
 
